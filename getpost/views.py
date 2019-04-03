@@ -15,7 +15,7 @@ def add(request):
             return HttpResponse("<html><body bgcolor=yellow><h1> Sum is:"+str(z)+"</h1></body></html>")
         except(ValueError):
             return HttpResponse("Invalid input")
-    elif request.method=="POST":
+    else:
         try:
             a=request.POST['t1']
             x=int(a)
